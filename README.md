@@ -6,11 +6,15 @@
 
 # Guide to run the project:
 
-### 1. Install the necessary requirements
+### 1.Clone the project using
+    ```
+    git clone [https://github.com/Shreyansh-1998/mlproject.git]
+    ```
+### 2. Install all the necessary libraries with 
   ```
   pip install -r requirements.txt
   ```
-### 2. Run the application
+### 3. Run the application 
 ``` 
 python3 app.py
 ```
