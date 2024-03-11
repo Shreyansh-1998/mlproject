@@ -3,7 +3,7 @@ import sys
 from src.exception import CustomException
 from src.logger import logging
 from dataclasses import dataclass
-
+import numpy as np
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
     RandomForestRegressor,
@@ -12,6 +12,7 @@ from sklearn.ensemble import (
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_squared_error
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
@@ -91,8 +92,14 @@ class ModelTrainer:
 
             predicted=best_model.predict(X_test)
             r2_score_value=r2_score(y_test,predicted)
+            mse=mean_squared_error(y_test,predicted)
+            rmse=np.sqrt(mse)
 
-            return r2_score_value
+            return (
+                f"Best_model_name: {best_model_name}",
+                f"R2_score: {r2_score_value}"
+                f" RMSE: {rmse}"
+)
 
         except Exception as e:
             raise CustomException(e,sys)
