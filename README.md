@@ -34,10 +34,7 @@ Datasource link :[https://www.kaggle.com/datasets/spscientist/students-performan
 
 # Guide to run the project:
 
-### 1.Clone the project using
-     ```
-         git clone
-    ```
+### 1.Clone the project
 
 ### 2. Install all the necessary libraries with 
   ```
