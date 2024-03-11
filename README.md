@@ -2,7 +2,7 @@
 
 ## Introduction About the data:
 
-*The goal is to predict the performance of student's score using(Regression Analysis)*
+*The goal is to predict the performance of student using(Regression Analysis)*
 
 Target variable:
 * `math score`: Marks obtained in Mathematics
