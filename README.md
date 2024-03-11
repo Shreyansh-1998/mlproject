@@ -1,10 +1,10 @@
 # End to End Machine Learning Project- Performance Indicator
 
-##Introduction About the data:
+## Introduction About the data:
 
 *The goal is to predict the performance of the student using(Regression Analysis)*
 
-#Guide to run the project:
+# Guide to run the project:
 
 ### 1. Install the necessary requirements
   ```
