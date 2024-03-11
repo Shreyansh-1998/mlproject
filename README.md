@@ -8,7 +8,7 @@
 
 ### 1.Clone the project using
     ```
-    git clone [https://github.com/Shreyansh-1998/mlproject.git]
+    git clone https://github.com/Shreyansh-1998/mlproject.git
     ```
 ### 2. Install all the necessary libraries with 
   ```
