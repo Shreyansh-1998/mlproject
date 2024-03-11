@@ -48,7 +48,27 @@ class ModelTrainer:
                 "XGBRegressor":XGBRegressor(),
                 "CatBoostRegressor":CatBoostRegressor(verbose=False)
             }
-            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models)
+
+            params={
+
+                "RandomForestRegressor":{'n_estimators':100,'max_depth':2},
+
+                "DecisionTreeRegressor":{'max_depth':2,'min_samples_split':2},
+
+                "LinearRegression":{},
+
+                "KNeighborsRegressor":{'n_neighbors':2,'weights':'uniform'},
+
+                "AdaBoostRegressor":{'n_estimators':100,'learning_rate':[0.01,0.1,1]},
+
+                "GradientBoostingRegressor":{'n_estimators':100,'learning_rate':[0.01,0.1,1]},
+
+                "XGBRegressor":{'n_estimators':100,'learning_rate':[0.01,0.1,1]},
+
+                "CatBoostRegressor":{'n_estimators':100}
+            }
+
+            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models,param=params)
 
             #To get the best model from the model report
             best_model_score=max(sorted(model_report.values()))
